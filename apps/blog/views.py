@@ -9,12 +9,12 @@ from apps.blog.serializers import PostSerializer, PostCommentSerializer
 # Create your views here.
 class PostAPIView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
-    serializer = PostSerializer
+    serializer_class = PostSerializer
 
 
 class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
-    serializer = PostSerializer
+    serializer_class = PostSerializer
 
     lookup_field = "pk"
 
